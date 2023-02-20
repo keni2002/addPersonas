@@ -26,30 +26,30 @@
 
                     <h4 class="center">Personas</h4>
                     <div class="row">
-                        <form class="col s12 m12">
+                        <form class="col s12 m12 ">
                             <div class="row">
                                 <div class="input-field col s12 m12">
-                                    <i class="material-icons prefix">account_circle</i>
-                                    <input id="icon_prefix" type="text" class="validate">
-                                    <label for="icon_prefix">Name</label>
+                                    <i class="material-icons">account_circle</i>
+                                    <input id="nombre" type="text" class="validate">
+                                    <label for="nombre">Name</label>
                                 </div>
 
                                 <div class="input-field col s12 m12">
-                                    <i class="material-icons prefix">spa</i>
-                                    <input id="icon_age" type="number" class="validate">
-                                    <label for="icon_age">Your Age</label>
+                                    <i class="material-icons">spa</i>
+                                    <input id="age" type="number" class="validate" min="1" max="200">
+                                    <label for="age">Your Age</label>
                                 </div>
 
                                 <div class="col">
                                     <p>Sexo:</p>
                                     <label>
-                                    <input name="group1" type="radio"/>
+                                    <input name="sexo" type="radio"/>
                                     <span>Masculino</span>
                                   </label>
                                     </p>
                                     <p>
                                         <label>
-                                    <input name="group1" type="radio" />
+                                    <input name="sexo" type="radio" />
                                     <span>Femenino</span>
                                   </label>
                                     </p>
@@ -68,9 +68,9 @@
 
                     <div class="row">
 
-                        <button class="btn col s12 m4 waves-effect waves-light green center" type="submit" name="action">Add</button>
+                        <button class="btn col s12 m4 l5 waves-effect waves-light green center" type="submit" name="action" id="agregador">Add</button>
 
-                        <button class="btn col s12 m4 offset-m4  waves-effect waves-light red lighten-2 center" type="submit" name="action">Remove</button>
+                        <button class="btn col s12 m4 l5 offset-m4 offset-l2  waves-effect waves-light red lighten-2 center" type="submit" name="action">Remove</button>
                     </div>
 
 
@@ -96,21 +96,7 @@
                         </thead>
 
                         <tbody id="tabla">
-                            <tr>
-                                <td>Alvin</td>
-                                <td>18</td>
-                                <td>M</td>
-                            </tr>
-                            <tr>
-                                <td>Meli</td>
-                                <td>19</td>
-                                <td>F</td>
-                            </tr>
-                            <tr>
-                                <td>Mario</td>
-                                <td>22</td>
-                                <td>M</td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -127,6 +113,7 @@
 
 
     <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
