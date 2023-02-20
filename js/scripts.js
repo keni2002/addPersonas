@@ -15,7 +15,7 @@
                 this.personas.push(people);
             }
             deletePersona(index) {
-
+                this.personas.splice(index, 1);
             }
         };
         var agregar = document.getElementById('agregador');
@@ -24,7 +24,7 @@
         var inputNombre = document.getElementById('nombre');
         var inputEdad = document.getElementById('age');
         var contador = document.getElementsByClassName('indice')[0];
-
+        var eliminados = 0;
 
 
         var personas = new Persona();
@@ -85,12 +85,29 @@
                 inputEdad.value = "";
                 radioSexo[0].checked = false;
                 radioSexo[1].checked = false;
+                console.log(personas.personas.length);
+            }
 
+        }
+
+        function fBorrar() {
+            var index = prompt("Que elemento deseas borrar?");
+            console.log(`Length: ${personas.personas.length}`);
+            if (index + eliminados > 0 && index <= personas.personas.length + eliminados) {
+                console.log("ok");
+                personas.deletePersona(Number(index) - 1 - eliminados);
+                console.log(Number(index) - 1 - eliminados);
+                renderHtml();
+                eliminados++;
+                console.log(eliminados);
+
+            } else {
+                alert("FUera de rango");
             }
 
         }
         agregar.addEventListener('click', addi);
-        // borrar.addEventListener('click', remover)
+        borrar.addEventListener('click', fBorrar);
 
 
 
